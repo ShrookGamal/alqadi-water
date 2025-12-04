@@ -1,4 +1,3 @@
-/* --- الألوان والخطوط --- */
 :root {
     --primary: #0061f2;
     --secondary: #00c6ff;
@@ -12,14 +11,13 @@
     --shadow: 0 10px 30px rgba(0, 97, 242, 0.1);
 }
 
-/* --- ضبط عام (مهم جداً للموبايل) --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body {
     font-family: 'Tajawal', sans-serif;
     background-color: var(--white);
     color: var(--text);
-    overflow-x: hidden; /* يمنع السكرول العرضي والقص */
+    overflow-x: hidden; 
     width: 100%;
     line-height: 1.7;
 }
@@ -27,8 +25,6 @@ html, body {
 a { text-decoration: none; transition: 0.3s; }
 ul { list-style: none; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-
-/* --- الناف بار --- */
 header {
     background: rgba(255, 255, 255, 0.98);
     padding: 10px 0;
@@ -45,15 +41,13 @@ header {
 .nav-links a { color: var(--dark); font-weight: 700; font-size: 15px; }
 .nav-links a:hover, .nav-links a.active { color: var(--primary); }
 .nav-btn { background: linear-gradient(90deg, var(--primary), var(--secondary)); color: white !important; padding: 8px 20px; border-radius: 50px; font-size: 14px; }
-
-/* --- الهيرو (إصلاح مشكلة القص) --- */
 .hero {
     height: 90vh;
     position: relative;
     display: flex; align-items: center; justify-content: center;
     text-align: center; color: white; margin-bottom: 0;
     background: url('images/IMG-20251204-WA0001.jpg') no-repeat center center/cover;
-    width: 100%; /* تأكيد العرض */
+    width: 100%; 
 }
 .hero-overlay {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
@@ -62,9 +56,9 @@ header {
 }
 .hero-content {
     position: relative; z-index: 2;
-    width: 100%; /* يأخذ عرض الشاشة بالكامل */
+    width: 100%; 
     max-width: 800px;
-    padding: 0 20px; /* مسافة داخلية حتى لا يلتصق الكلام بالحواف */
+    padding: 0 20px; 
 }
 .hero-content h1 {
     font-size: 2.8rem; font-weight: 800; margin-bottom: 15px;
@@ -80,8 +74,7 @@ header {
     display: inline-block;
 }
 
-/* --- إعدادات الأقسام --- */
-.section { padding: 60px 0; overflow: hidden; } /* تقليل الحواف للموبايل */
+.section { padding: 60px 0; overflow: hidden; } 
 .bg-blue-grad { background: var(--grad-section-1); }
 .bg-green-grad { background: var(--grad-section-2); }
 .bg-cyan-grad { background: var(--grad-section-blue); }
@@ -90,16 +83,14 @@ header {
 .section-title h2 { font-size: 2rem; color: var(--primary); font-weight: 800; }
 .line { width: 80px; height: 4px; background: linear-gradient(90deg, var(--primary), var(--secondary)); margin: 15px auto; border-radius: 10px; }
 
-/* --- الأقسام الداخلية --- */
 .about-wrapper { display: flex; gap: 40px; align-items: center; }
 .about-text { flex: 1; }
 .about-image { flex: 1; }
 .about-image img { width: 100%; border-radius: 20px; box-shadow: 10px 10px 0 rgba(0, 97, 242, 0.15); border: 4px solid white; }
 
 .check-list li { margin-bottom: 10px; font-weight: bold; color: var(--dark); font-size: 1rem; display: flex; align-items: center; gap: 10px; }
-.check-list i { color: #27ae60; flex-shrink: 0; } /* منع انكماش الأيقونة */
+.check-list i { color: #27ae60; flex-shrink: 0; } 
 
-/* --- المميزات والخدمات --- */
 .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
 .feature-card {
     background: white; padding: 25px; border-radius: 20px; text-align: center;
@@ -126,7 +117,6 @@ header {
     color: white; border-radius: 50px; font-weight: bold; font-size: 0.9rem;
 }
 
-/* --- تواصل معنا --- */
 .contact-section {
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     color: white; padding: 60px 0;
@@ -148,26 +138,23 @@ header {
 .c-btn.call { background: var(--primary); }
 .c-btn.whatsapp { background: #25D366; }
 
-/* الفوتر */
 footer { background: #111; color: #888; padding: 25px 0; text-align: center; border-top: 1px solid #222; }
 footer p { margin-bottom: 5px; font-size: 0.9rem; }
 .dev-credits a { color: var(--secondary); font-weight: bold; }
 
-/* --- الموبايل والقائمة الجانبية (تم الإصلاح) --- */
 .hamburger { display: none; font-size: 26px; color: var(--primary); cursor: pointer; }
 
-/* إعدادات القائمة الجانبية */
 .mobile-menu {
     position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
     background: rgba(0,0,0,0.6); z-index: 2000; transition: 0.4s;
-    display: flex; justify-content: flex-end; /* المحتوى يجي يمين */
+    display: flex; justify-content: flex-end; 
     visibility: hidden;
 }
 .mobile-menu.active { right: 0; visibility: visible; }
 
 .menu-box {
     background: white;
-    width: 75%; /* العرض 75% من الشاشة */
+    width: 75%; 
     max-width: 300px;
     height: 100%;
     padding: 25px;
@@ -189,7 +176,6 @@ footer p { margin-bottom: 5px; font-size: 0.9rem; }
     border-bottom: 1px solid #f9f9f9; padding: 10px 0; display: block;
 }
 
-/* زر الواتساب العائم */
 .wa-float {
     position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white;
     width: 55px; height: 55px; border-radius: 50%;
@@ -197,7 +183,6 @@ footer p { margin-bottom: 5px; font-size: 0.9rem; }
     font-size: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 999;
 }
 
-/* تنسيقات الصفحات الداخلية */
 .page-header {
     height: 40vh; background-size: cover; background-position: center; position: relative;
     display: flex; align-items: center; justify-content: center; color: white; margin-top: 60px;
@@ -215,27 +200,62 @@ footer p { margin-bottom: 5px; font-size: 0.9rem; }
 .details-gallery img:first-child { grid-column: span 2; height: 220px; }
 
 
-/* --- ميديا كويري (تعديلات الموبايل) --- */
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .hamburger { display: block; }
 
-    /* تعديل الهيرو للموبايل */
     .hero { height: 85vh; }
     .hero-content { padding: 0 15px; }
     .hero-content h1 { font-size: 2rem; }
     .hero-content p { font-size: 1rem; }
 
-    /* ترتيب العناصر عمودياً */
     .about-wrapper, .details-container { flex-direction: column; }
     .contact-cards-container { flex-direction: column; }
     .details-gallery { grid-template-columns: 1fr; }
     .details-gallery img:first-child { height: 200px; }
 
-    /* تعديل الهيدر الداخلي */
     .page-header { height: 35vh; }
     .ph-text h1 { font-size: 1.8rem; }
     
-    /* الجداول في الموبايل */
     .specs-table td { padding: 10px; font-size: 0.9rem; }
+}
+.neighborhoods-box {
+    background: #f8fbff;
+    border: 1px solid #eef2ff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.neighborhoods-box h3 {
+    font-size: 1.2rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.district-tag {
+    background: white;
+    color: var(--primary);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 1px solid #dae7ff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    transition: 0.3s;
+}
+
+.district-tag:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
 }
